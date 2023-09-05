@@ -7,14 +7,13 @@ public class J0905_14 {
 
 	public static void main(String[] args) {
 		//1-100까지 랜덤숫자를 생성해서 맞추는 프로그램을 구현하시오.
+		Scanner scan = new Scanner(System.in);
 		int[] num = new int[10]; //배열 10개 생성
 		
 		
 		//1.랜덤숫자 생성
-		Scanner scan = new Scanner(System.in);
 		int random = (int)(Math.random()*100)+1;
 		int i=0; //초기식
-//		System.out.println("임시 : "+random);
 		
 		//2.while 무한반복
 		
