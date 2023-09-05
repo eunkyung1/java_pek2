@@ -15,9 +15,8 @@ public class J0904_11 {
 			}
 		}
 		
-		System.out.println(sum);
-		System.out.println(i);
-		
+		System.out.printf("정답은 : %d, %d \n",i,sum);
+		System.out.printf("이전 단계 : %d, %d \n",i-1,sum-i);
 		
 		//1부터 100까지의 합을 출력하시오.
 		
