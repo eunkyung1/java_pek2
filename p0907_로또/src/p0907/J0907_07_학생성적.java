@@ -40,8 +40,10 @@ public class J0907_07_학생성적 {
 				System.out.println("[ 성적입력화면 ]");
 				System.out.println("---------------");
 				
+				//학번,이름
 				for(int i=count;i<10;i++) {
 					stuNo[i] = count + 1; //1,2,3,,,,,,
+					
 					System.out.println((count+1)+"번째 이름을 입력하세요.(*이전화면 0)");
 					name[i] = scan.next();
 					if(name[i].equals("0")) {
