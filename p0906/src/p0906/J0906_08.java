@@ -7,6 +7,7 @@ public class J0906_08 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] subject = {"국어","영어","수학"};
+		
 		// 2차원 배열
 		int[][] score = new int[5][3];
 
