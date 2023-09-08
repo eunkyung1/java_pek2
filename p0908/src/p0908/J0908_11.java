@@ -9,6 +9,7 @@ public class J0908_11 {
 		int math = 98;
 		
 		System.out.println("합계 : " + total(kor,eng,math));
+		
 		System.out.println("평균 : " + avg(kor,eng,math));
 	
 	
