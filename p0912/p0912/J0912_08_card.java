@@ -5,7 +5,7 @@ public class J0912_08_card {
 	public static void main(String[] args) {
 		
 		
-		Deck_외우기 d = new Deck_외우기();	
+		Deck d = new Deck();	
 		d.CardPrint();
 		d.shuffle();
 		System.out.println("-----------------");

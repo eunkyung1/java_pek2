@@ -1,12 +1,12 @@
 package p0912;
 
-public class Deck_외우기 {
+public class Deck {
 	
 	Card[] c = new Card[52];
 	String[] shape = {"Spade","Heart","Diamond","Clover"}; 
 	
 	
-	Deck_외우기(){//기본생성자
+	Deck(){//기본생성자
 		for(int i=0;i<c.length;i++) {
 			c[i] = new Card(shape[(i/13)],(i%13)+1); // 객체선언 = 참조변수명.변수명
 		
