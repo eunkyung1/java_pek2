@@ -15,7 +15,7 @@ public class P_card {
 										"9","10","J","Q","K"}; 
 	
 	public String toString( ) {
-		return String.format("[%s,%d]", kind,cardShape[number]);
+		return String.format("[%s,%s]", kind,cardShape[number]);
 	}
 	
 	
