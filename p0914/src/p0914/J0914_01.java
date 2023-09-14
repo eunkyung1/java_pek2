@@ -26,6 +26,9 @@ public class J0914_01 {
 		s1.setTotal(s1.getKor()+s1.getEng()+s1.getMath());
 		s1.setAvg(s1.getTotal()/3.0);
 
+		
+		
+		
 	}//main
 
 }//class
