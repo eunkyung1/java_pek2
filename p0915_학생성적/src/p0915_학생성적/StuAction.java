@@ -251,7 +251,47 @@ public class StuAction {
 	
 		}//stuSearch
 		
-		
+		void stuRank() {
+			System.out.println("---------------------------------------------------------------");
+			System.out.println("[ 학생 성적 등수처리 ]");
+			System.out.println("---------------------------------------------------------------");
+			System.out.printf("등수처리를 진행할까요? \n");
+			System.out.println("1. 예");
+			System.out.println("2. 아니오");
+			System.out.println("0. 이전페이지 이동");
+			int choice = scan.nextInt();
+			
+			switch(choice) {
+			
+			case 1:
+			for(int i = 0; i<list.size();i++) {
+				int count = 1;
+				StuScore s = (StuScore)list.get(i);
+				for(int j=0;j<list.size();j++) {
+					StuScore s2 = (StuScore)list.get(j);
+					if(s.getTotal()<s2.getTotal()) {
+						count++;
+					}//if
+					
+				}
+				s.setRank(count); //등수입력
+				}//for
+				System.out.println("등수처리가 완료되었습니다.");
+				System.out.println();
+			
+			
+			case 2:
+				System.out.println("등수처리가 취소 되었습니다.");
+				System.out.println();
+				break;
+				
+			case 0:
+				System.out.println("이전페이지로 이동합니다.");
+				System.out.println();
+			    break;//
+			    
+			}//switch
+		}//stuRank
 		
 		
 		

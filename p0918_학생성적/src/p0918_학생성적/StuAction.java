@@ -139,15 +139,115 @@ public class StuAction {
 						System.out.println("수학점수가 변경되었습니다.");
 						System.out.println();
 						break;
+						
 
-					}// while
-				} // switch
-			} // if
-		} // for
+				
+			}//switch
+
+					}// if
+				} // for
+			} // while
 
 	}// stuUpdate
 	
 	
+	void stuDelete() {
+		while(true) {
+			System.out.println("[학생 성적 삭제]");
+			System.out.println("삭제하고자 하는 학생이름을 입력하세요.(0.이전페이지)");
+			String name = scan.next();
+			if(name.equals("0")) {
+				System.out.println(">>이전페이지로 이동합니다.");
+				System.out.println();
+				break;
+			}//if
+			int count = -1;
+			for(int i=0; i<list.size();i++) {
+				StuScore s = (StuScore)list.get(i);
+				if(name.equals(s.getName())) {
+					
+					count = i;
+					System.out.printf("%s 학생을 찾았습니다.\n",name);
+					System.out.println("[ 학생성적삭제 선택]");
+					System.out.println("1. 예");
+					System.out.println("2. 아니오");
+					System.out.println("-----------------------");
+					int choice = scan.nextInt();
+					
+					switch(choice) {
+					case 1 :
+						list.remove(i);
+						System.out.printf("%s 학생 성적이 삭제되었습니다.",name);
+						System.out.println();
+						break;
+						
+					case 2 :
+						System.out.printf("%s 학생 성적 삭제 취소되었습니다.",name);
+						System.out.println();
+						break;
+					}//switch
+					
+					
+				}//if
+			}//for
+			if(count==-1) {
+				System.out.printf("※※찾고가 하는 %s학생이 없습니다.※※ 다시 검색하세요.");
+				System.out.println();
+			}//if
+			
+		}//while
+		
+	}//stuDelete
+	
+	
+	void stuSearch () {
+		while(true) {
+			
+			System.out.println("[ 학생 성적 검색 ]");
+			System.out.println("찾고자 하는 학생 이름을 입력하세요.(0.이전페이지 이동)");
+			String name = scan.next();
+			
+			if(name.equals("0")) {
+				System.out.println(">>이전페이지로 이동합니다.");
+				System.out.println();
+				break;
+			}//if
+			
+			int count = -1;
+			for(int i=0;i<list.size();i++) {
+				StuScore s = (StuScore)list.get(i);
+				if(name.equals(s.getName())) {
+					
+					count= i;
+					System.out.printf("%s 학생을 찾았습니다.\n",name);
+					
+					System.out.println();
+					System.out.printf("%s 학생 성적 출력 \n",name);
+					System.out.println("-------------------------------------------------");
+					for(int j=0;j<list.size();j++) {
+						System.out.printf("%s/t",title[j]);
+					}//for j
+					
+					System.out.println();
+					System.out.println("-------------------------------------------------");
+					System.out.printf("%d\t%s\t%d\t%d\t%d\t%d\t%.2f\t%d\n",s.getStuNo(),s.getName(),s.getKor(),s.getEng(),
+							s.getMath(),s.getTotal(),s.getAvg(),s.getRank());
+					System.out.println("-------------------------------------------------");
+					System.out.println();
+					break;
+				}//if
+			}//for
+			if(count==-1) {
+				System.out.printf("※※찾고가 하는 %s학생이 없습니다.※※ 다시 검색하세요.",name);
+				System.out.println();
+			}//if
+			
+		}//while
+	}//stuSearch
+
 	
 
-}
+}//class
+	
+	
+
