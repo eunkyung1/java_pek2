@@ -3,7 +3,7 @@ package p0914;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class J0914_11 {
+public class J0914_11_쇼핑몰 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
