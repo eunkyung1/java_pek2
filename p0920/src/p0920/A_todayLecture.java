@@ -25,7 +25,7 @@ public class A_todayLecture {
 	
 	
 //Math클래스 : ceil floor max min random abs
-
+//dd
 
 
 
