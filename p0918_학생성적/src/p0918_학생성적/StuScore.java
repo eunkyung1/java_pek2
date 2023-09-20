@@ -9,7 +9,7 @@ public class StuScore {
 	}
 	
 	
-	
+	public StuScore() {}
 	public StuScore(String name, int kor, int eng, int math) {
 		super();
 		this.name = name;
