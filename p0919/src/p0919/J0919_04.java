@@ -8,7 +8,7 @@ import java.io.IOException;
 public class J0919_04 {
 
 	public static void main(String[] args) {
-		File f = new File("C:/	download/aaa.txt");
+		File f = new File("C:/download/aaa.txt");
 		if(!f.exists()) {
 			try {
 				f.createNewFile();	//하드디스크에 저장
