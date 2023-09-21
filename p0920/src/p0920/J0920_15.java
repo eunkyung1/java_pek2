@@ -13,9 +13,9 @@ public class J0920_15 {
 		System.out.println(Math.round(b));  //반올림 소수점 없는 long
 
 		
-		int no1 = 10;
+		int no1 = 5;
 		int no2 = 15;
-		int no3 = 13;
+		int no3 = 2;
 		
 		System.out.println(Math.max(no1, no2)); //최대값추출
 		System.out.println(Math.min(no1, no2)); //최소값추출

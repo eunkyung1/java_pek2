@@ -8,7 +8,7 @@ public class Student {
 		this.stuNum = stuNum;
 	}
 	
-	//새ㅗㄹ운 객체를 보
+	//새로운 객체를 보
 	Student(Student s) {
 		this.stuNum = s.getStuNum();
 	}
