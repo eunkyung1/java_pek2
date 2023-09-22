@@ -1,51 +1,45 @@
-package p0921;
+package p0922;
 
 public class StuScore {
-
 	
-	static int count = 1;
-	{
-		this.stuNum = count;
-		count++;
-	}
-	public StuScore(){}
-	public StuScore(String name, int kor, int eng, int math) {
+	
+	static int count =1;
+	{//초기화블럭 //현 상태 좋은상태는 아님.
+	this.stuNum = count;
+	count++;
 		
+	}
+	
+	public StuScore(){} //기본생성자
+	
+	
+	
+	
+
+	//전체생성자
+	public StuScore(int stuNum, String name, int kor, int eng, int math, int total, double avg, int rank) {
+		super();
+		this.stuNum = stuNum; //2번 stuNum입력이 되는 것.
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
-		this.total = kor+eng+math;
+		this.total = kor + eng + math;
 		this.avg = this.total/3.0;
 		this.rank = rank;
 	}
-		
-	public StuScore(int stuNum, String name, int kor, int eng, int math) {
-			
-			this.stuNum = stuNum;
-			this.name = name;
-			this.kor = kor;
-			this.eng = eng;
-			this.math = math;
-			this.total = kor+eng+math;
-			this.avg = this.total/3.0;
-			this.rank = rank;
-			
-	}
-
-	public StuScore(int stuNum, String name, int kor, int eng, int math, int total, double avg, int rank) {
+	
+	public StuScore(String name, int kor, int eng, int math)  {
 		super();
-		this.stuNum = stuNum;
+		
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
-		this.total = total;
-		this.avg = avg;
-		this.rank = rank;
+		this.total = kor + eng + math;
+		this.avg = this.total/3.0;
+		
 	}
-
-
 
 
 
@@ -58,57 +52,107 @@ public class StuScore {
 	private int total;
 	private double avg;
 	private int rank;
-	
-	
-	
 	public int getStuNum() {
 		return stuNum;
 	}
+
+
+
 	public void setStuNum(int stuNum) {
 		this.stuNum = stuNum;
 	}
+
+
+
 	public String getName() {
 		return name;
 	}
+
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
+
 	public int getKor() {
 		return kor;
 	}
+
+
+
 	public void setKor(int kor) {
-		this.kor = kor;
+		if(kor>0 && kor<=100) {
+			this.kor = kor;
+			
+		}else if(kor<0) {
+			this.kor =0;
+		}else {
+			this.kor = 100;
+		}
 	}
+
+
+
 	public int getEng() {
 		return eng;
 	}
+
+
+
 	public void setEng(int eng) {
 		this.eng = eng;
 	}
+
+
+
 	public int getMath() {
 		return math;
 	}
+
+
+
 	public void setMath(int math) {
 		this.math = math;
 	}
+
+
+
 	public int getTotal() {
 		return total;
 	}
+
+
+
 	public void setTotal(int total) {
 		this.total = total;
 	}
+
+
+
 	public double getAvg() {
 		return avg;
 	}
+
+
+
 	public void setAvg(double avg) {
 		this.avg = avg;
 	}
+
+
+
 	public int getRank() {
 		return rank;
 	}
+
+
+
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
+	
 	
 	
 	

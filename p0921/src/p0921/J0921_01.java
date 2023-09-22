@@ -15,9 +15,9 @@ public class J0921_01 {
 		m3 = Math.max(Math.max(no1, no2), no3);
 		m2 = (no1+no2+no3)-m1-m3;
 		
-//		System.out.printf("작은 수부터 나열 : %d, %d, %d \n",m1,m2,m3);
-//		System.out.println(Math.max(no1, no2)); //최대값추출
-//		System.out.println(Math.min(no1, no2)); //최소값추출
+		System.out.printf("작은 수부터 나열 : %d, %d, %d \n",m1,m2,m3);
+		System.out.println(Math.max(no1, no2)); //최대값추출
+		System.out.println(Math.min(no1, no2)); //최소값추출
 		
 		
 		

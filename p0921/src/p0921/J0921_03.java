@@ -13,7 +13,7 @@ public class J0921_03 {
 		Scanner scan = new Scanner(System.in);		
 		ArrayList<StuScore> list = new ArrayList();
 		
-		StuScore s = new StuScore();
+
 		
 		while(true) {
 			System.out.println("학번을 입력하세요.(0.프로그램 종료)");
